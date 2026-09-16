@@ -1,0 +1,1341 @@
+/* =========================================================
+   NEW GALLERY
+   PREMIUM INDUSTRIAL PROJECT SHOWCASE
+   Uses existing root variables
+   ========================================================= */
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+
+/* =========================================================
+   HERO EYEBROW
+   ========================================================= */
+
+.new-gallery-eyebrow {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    padding: 7px 13px;
+
+    border:
+        1px solid
+        var(--border-accent);
+
+    border-radius: var(--r-xs);
+
+    background: var(--accent-soft);
+
+    color: var(--accent-color);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-eyebrow);
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: var(--tr-wider);
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.new-gallery-title {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-display);
+
+    font-weight: 700;
+
+    line-height: 1;
+
+    letter-spacing: var(--tr-tight);
+}
+
+
+.new-gallery-title span {
+    display: block;
+
+    color: var(--accent-color);
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.new-gallery-description {
+    max-width: 690px;
+
+    margin:
+        22px
+        auto
+        0;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-lead);
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GALLERY SECTION
+   ========================================================= */
+
+.new-gallery-section {
+    position: relative;
+
+    padding-block: var(--section-y);
+
+    overflow: hidden;
+
+    background: var(--bg-primary);
+}
+
+
+/* Subtle background glow */
+.new-gallery-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: 0;
+    right: -300px;
+
+    background: var(--accent-soft);
+
+    filter: blur(160px);
+
+    opacity: 0.08;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
+
+.new-gallery-container {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        var(--container-max),
+        calc(100% - (var(--container-pad) * 2))
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.new-gallery-intro {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(300px, 0.7fr);
+
+    gap: 60px;
+
+    align-items: end;
+
+    margin-bottom: 52px;
+
+    padding-bottom: 28px;
+
+    border-bottom:
+        1px solid
+        var(--border-color);
+}
+
+
+/* =========================================================
+   INTRO LEFT
+   ========================================================= */
+
+.new-gallery-intro-left {
+    min-width: 0;
+}
+
+
+.new-gallery-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 12px;
+
+    color: var(--accent-color);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-eyebrow);
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    letter-spacing: var(--tr-wider);
+
+    text-transform: uppercase;
+}
+
+
+.new-gallery-label::before {
+    content: "";
+
+    width: 26px;
+    height: 1px;
+
+    margin-right: 10px;
+
+    background: var(--accent-color);
+}
+
+
+.new-gallery-heading {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-h2);
+
+    font-weight: 700;
+
+    line-height: 1.05;
+
+    letter-spacing: var(--tr-tight);
+}
+
+
+/* =========================================================
+   INTRO RIGHT
+   ========================================================= */
+
+.new-gallery-intro-right {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+
+.new-gallery-intro-text {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: var(--text-tertiary);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-body);
+
+    line-height: 1.7;
+}
+
+
+.new-gallery-count {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        6px
+        10px;
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: var(--r-xs);
+
+    color: var(--text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-meta);
+
+    font-weight: 700;
+
+    letter-spacing: var(--tr-wide);
+}
+
+
+/* =========================================================
+   GALLERY GRID
+   ========================================================= */
+
+.new-gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 34px 22px;
+}
+
+
+/* =========================================================
+   GALLERY ITEM
+   ========================================================= */
+
+.new-gallery-item {
+    min-width: 0;
+
+    cursor: pointer;
+
+    transition: var(--transition-smooth);
+}
+
+
+.new-gallery-item:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+   ========================================================= */
+
+.new-gallery-image-wrap {
+    position: relative;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: var(--bg-tertiary);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    border-radius: var(--r-lg);
+
+    box-shadow: var(--card-shadow);
+
+    isolation: isolate;
+}
+
+
+/* Large item */
+.new-gallery-item-large {
+    grid-column: span 2;
+}
+
+
+.new-gallery-item-large .new-gallery-image-wrap {
+    aspect-ratio: 16 / 9;
+}
+
+
+/* Wide item */
+.new-gallery-item-wide {
+    grid-column: span 2;
+}
+
+
+.new-gallery-item-wide .new-gallery-image-wrap {
+    aspect-ratio: 16 / 9;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.new-gallery-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: var(--bg-elevated);
+
+    transition:
+        transform 0.65s
+        cubic-bezier(0.4, 0, 0.2, 1),
+        filter 0.4s ease;
+}
+
+
+.new-gallery-item:hover .new-gallery-image {
+    transform: scale(1.055);
+
+    filter: brightness(0.68);
+}
+
+
+/* =========================================================
+   IMAGE DARK GRADIENT
+   ========================================================= */
+
+.new-gallery-image-wrap::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(5, 8, 12, 0.42) 72%,
+            rgba(5, 8, 12, 0.82) 100%
+        );
+
+    pointer-events: none;
+
+    opacity: 0.75;
+
+    transition: opacity 0.35s ease;
+}
+
+
+.new-gallery-item:hover
+.new-gallery-image-wrap::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   IMAGE NUMBER
+   ========================================================= */
+
+.new-gallery-image-number {
+    position: absolute;
+
+    top: 16px;
+    left: 16px;
+
+    z-index: 3;
+
+    min-width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-inline: 8px;
+
+    border:
+        1px solid
+        var(--border-strong);
+
+    border-radius: var(--r-xs);
+
+    background: var(--bg-glass);
+
+    color: var(--text-primary);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-meta);
+
+    font-weight: 700;
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.new-gallery-item:hover
+.new-gallery-image-number {
+    border-color: var(--border-accent);
+
+    background: var(--accent-soft);
+
+    color: var(--accent-color);
+}
+
+
+/* =========================================================
+   VIEW PROJECT
+   ========================================================= */
+
+.new-gallery-view {
+    position: absolute;
+
+    right: 16px;
+    bottom: 16px;
+
+    z-index: 4;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        8px
+        11px;
+
+    border:
+        1px solid
+        var(--border-strong);
+
+    border-radius: var(--r-xs);
+
+    background: var(--bg-glass);
+
+    color: var(--text-primary);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-meta);
+
+    font-weight: 700;
+
+    opacity: 0;
+
+    transform: translateY(8px);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.new-gallery-item:hover .new-gallery-view {
+    opacity: 1;
+
+    transform: translateY(0);
+
+    border-color: var(--border-accent);
+}
+
+
+.new-gallery-view i {
+    color: var(--accent-color);
+
+    font-size: var(--fs-small);
+}
+
+
+/* =========================================================
+   PROJECT INFO
+   ========================================================= */
+
+.new-gallery-info {
+    position: relative;
+
+    padding:
+        16px
+        3px
+        0;
+}
+
+
+/* =========================================================
+   LOCATION
+   ========================================================= */
+
+.new-gallery-location {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 6px;
+
+    color: var(--accent-color);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-meta);
+
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    letter-spacing: var(--tr-wide);
+
+    text-transform: uppercase;
+}
+
+
+.new-gallery-location i {
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   PROJECT TITLE
+   ========================================================= */
+
+.new-gallery-project-title {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+
+    font-size: var(--fs-h4);
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    letter-spacing: var(--tr-snug);
+
+    transition: color 0.3s ease;
+}
+
+
+.new-gallery-item:hover
+.new-gallery-project-title {
+    color: var(--accent-hover);
+}
+
+
+/* =========================================================
+   PROJECT TYPE
+   ========================================================= */
+
+.new-gallery-project-type {
+    margin:
+        5px
+        0
+        0;
+
+    color: var(--text-muted);
+
+    font-family: var(--font-body);
+
+    font-size: var(--fs-small);
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .new-gallery-hero {
+        min-height: 42vh !important;
+
+        padding:
+            125px
+            var(--container-pad)
+            60px !important;
+    }
+
+
+    .new-gallery-title {
+        font-size:
+            clamp(
+                44px,
+                7vw,
+                60px
+            );
+    }
+
+
+    .new-gallery-intro {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        align-items: start;
+
+        margin-bottom: 42px;
+    }
+
+
+    .new-gallery-intro-right {
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+    }
+
+
+    .new-gallery-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 28px 18px;
+    }
+
+
+    .new-gallery-item-large,
+    .new-gallery-item-wide {
+        grid-column: span 2;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .new-gallery-hero {
+        min-height: auto !important;
+
+        padding:
+            110px
+            var(--container-pad)
+            58px !important;
+    }
+
+
+    .new-gallery-hero-inner {
+        width: 100%;
+    }
+
+
+    .new-gallery-eyebrow {
+        margin-bottom: 15px;
+
+        padding:
+            6px
+            10px;
+
+        font-size: var(--fs-meta);
+    }
+
+
+    .new-gallery-title {
+        font-size:
+            clamp(
+                36px,
+                10vw,
+                48px
+            );
+
+        line-height: 1.02;
+    }
+
+
+    .new-gallery-description {
+        margin-top: 18px;
+
+        font-size: var(--fs-body);
+
+        line-height: 1.65;
+    }
+
+
+    /* Intro */
+    .new-gallery-intro {
+        gap: 18px;
+
+        margin-bottom: 34px;
+
+        padding-bottom: 22px;
+    }
+
+
+    .new-gallery-label {
+        margin-bottom: 9px;
+    }
+
+
+    .new-gallery-heading {
+        font-size:
+            clamp(
+                30px,
+                8vw,
+                40px
+            );
+    }
+
+
+    .new-gallery-intro-right {
+        display: block;
+    }
+
+
+    .new-gallery-intro-text {
+        margin-bottom: 13px;
+
+        font-size: var(--fs-body);
+    }
+
+
+    /* Grid */
+    .new-gallery-grid {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+
+    .new-gallery-item-large,
+    .new-gallery-item-wide {
+        grid-column: span 1;
+    }
+
+
+    .new-gallery-image-wrap,
+    .new-gallery-item-large .new-gallery-image-wrap,
+    .new-gallery-item-wide .new-gallery-image-wrap {
+        aspect-ratio: 16 / 10;
+    }
+
+
+    .new-gallery-image-number {
+        top: 12px;
+        left: 12px;
+
+        min-width: 30px;
+        height: 30px;
+    }
+
+
+    .new-gallery-view {
+        display: none;
+    }
+
+
+    .new-gallery-info {
+        padding-top: 13px;
+    }
+
+
+    .new-gallery-project-title {
+        font-size: var(--fs-h4);
+    }
+
+
+    .new-gallery-project-type {
+        font-size: var(--fs-small);
+    }
+
+
+    .new-gallery-item:hover {
+        transform: translateY(-2px);
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .new-gallery-hero {
+        padding:
+            100px
+            18px
+            48px !important;
+    }
+
+
+    .new-gallery-title {
+        font-size:
+            clamp(
+                33px,
+                10vw,
+                42px
+            );
+    }
+
+
+    .new-gallery-description {
+        font-size: var(--fs-small);
+    }
+
+
+    .new-gallery-container {
+        width:
+            calc(
+                100% - 36px
+            );
+    }
+
+
+    .new-gallery-heading {
+        font-size:
+            clamp(
+                28px,
+                8.5vw,
+                36px
+            );
+    }
+
+
+    .new-gallery-grid {
+        gap: 24px;
+    }
+
+
+    .new-gallery-image-wrap,
+    .new-gallery-item-large .new-gallery-image-wrap,
+    .new-gallery-item-wide .new-gallery-image-wrap {
+        aspect-ratio: 4 / 3;
+
+        border-radius: var(--r-md);
+    }
+
+
+    .new-gallery-image-number {
+        top: 10px;
+        left: 10px;
+
+        min-width: 28px;
+        height: 28px;
+
+        font-size: 11px;
+    }
+
+
+    .new-gallery-location {
+        font-size: var(--fs-meta);
+    }
+
+
+    .new-gallery-project-title {
+        font-size: var(--fs-small);
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) {
+
+    .new-gallery-item:hover {
+        transform: none;
+    }
+
+
+    .new-gallery-item:hover .new-gallery-image {
+        transform: none;
+
+        filter: none;
+    }
+
+
+    .new-gallery-item:hover
+    .new-gallery-image-number {
+        border-color: var(--border-strong);
+
+        background: var(--bg-glass);
+
+        color: var(--text-primary);
+    }
+
+
+    .new-gallery-item:hover
+    .new-gallery-project-title {
+        color: var(--text-primary);
+    }
+
+
+    .new-gallery-view {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+.new-gallery-item:focus-visible {
+    outline:
+        2px solid
+        var(--accent-color);
+
+    outline-offset: 5px;
+
+    border-radius: var(--r-lg);
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .new-gallery-item,
+    .new-gallery-item *,
+    .new-gallery-image,
+    .new-gallery-view,
+    .new-gallery-image-wrap::after {
+        transition: none !important;
+
+        animation: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =============================================
+   GALLERY HERO
+============================================= */
+
+.new-gallery-hero {
+    position: relative;
+
+    height: 58vh;
+    min-height: 450px;
+
+    padding: 120px 20px 60px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 12, 0.97) 0%,
+            rgba(5, 8, 12, 0.92) 28%,
+            rgba(5, 8, 12, 0.70) 55%,
+            rgba(5, 8, 12, 0.28) 100%
+        ),
+        url("../images/b_img_4.png") center center / cover no-repeat;
+
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+
+/* =============================================
+   BOTTOM FADE
+============================================= */
+
+.new-gallery-hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 28%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(5, 8, 12, 0.88),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+
+/* =============================================
+   INNER
+============================================= */
+
+.new-gallery-hero-inner {
+    position: relative;
+    z-index: 2;
+
+    width: min(
+        var(--container-max),
+        calc(100% - (var(--container-pad) * 2))
+    );
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+}
+
+
+/* =============================================
+   CONTENT
+============================================= */
+
+.new-gallery-hero-content {
+    max-width: 720px;
+
+    text-align: left;
+}
+
+
+/* =============================================
+   EYEBROW
+============================================= */
+
+.new-gallery-eyebrow {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 16px;
+
+    color: var(--accent-color);
+
+    font-family: var(--font-body);
+    font-size: var(--fs-eyebrow);
+    font-weight: 700;
+
+    line-height: 1;
+    letter-spacing: var(--tr-wider);
+    text-transform: uppercase;
+}
+
+.new-gallery-eyebrow::before {
+    content: "";
+
+    width: 30px;
+    height: 1px;
+
+    flex-shrink: 0;
+
+    background: var(--accent-color);
+}
+
+
+/* =============================================
+   TITLE
+============================================= */
+
+.new-gallery-title {
+    margin: 0 0 18px;
+
+    color: var(--text-primary);
+
+    font-family: var(--font-heading);
+    font-size: var(--fs-h1);
+    font-weight: 700;
+
+    line-height: 1.02;
+    letter-spacing: var(--tr-tight);
+}
+
+.new-gallery-title span {
+    display: block;
+
+    color: var(--accent-color);
+}
+
+
+/* =============================================
+   DESCRIPTION
+============================================= */
+
+.new-gallery-description {
+    max-width: 590px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-family: var(--font-body);
+    font-size: var(--fs-lead);
+    font-weight: 400;
+
+    line-height: 1.65;
+}
+
+
+/* =============================================
+   TABLET
+============================================= */
+
+@media (max-width: 900px) {
+
+    .new-gallery-hero {
+        height: 50vh;
+        min-height: 420px;
+
+        padding: 110px 20px 55px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 8, 12, 0.97) 0%,
+                rgba(5, 8, 12, 0.89) 45%,
+                rgba(5, 8, 12, 0.55) 100%
+            ),
+            url("../images/b_img_4.png") center center / cover no-repeat;
+    }
+
+    .new-gallery-hero-content {
+        max-width: 650px;
+    }
+}
+
+
+/* =============================================
+   MOBILE
+============================================= */
+
+@media (max-width: 600px) {
+
+    .new-gallery-hero {
+        height: 58vh;
+        min-height: 410px;
+
+        padding: 100px 18px 45px;
+
+        align-items: center;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(5, 8, 12, 0.97) 0%,
+                rgba(5, 8, 12, 0.91) 58%,
+                rgba(5, 8, 12, 0.72) 100%
+            ),
+            url("../images/b_img_4.png") center center / cover no-repeat;
+    }
+
+    .new-gallery-hero-inner {
+        width: 100%;
+
+        margin: 0;
+
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+    .new-gallery-hero-content {
+        width: 100%;
+        max-width: 100%;
+
+        text-align: left;
+    }
+
+
+    /* Eyebrow */
+
+    .new-gallery-eyebrow {
+        margin-bottom: 13px;
+
+        gap: 8px;
+    }
+
+    .new-gallery-eyebrow::before {
+        width: 22px;
+    }
+
+
+    /* Title */
+
+    .new-gallery-title {
+        margin-bottom: 16px;
+
+        font-size: clamp(36px, 11vw, 52px);
+        line-height: 1.04;
+    }
+
+
+    /* Description */
+
+    .new-gallery-description {
+        max-width: 100%;
+
+        font-size: var(--fs-body);
+        line-height: 1.6;
+    }
+}
+
+
+/* =============================================
+   SMALL MOBILE
+============================================= */
+
+@media (max-width: 380px) {
+
+    .new-gallery-hero {
+        height: 54vh;
+        min-height: 390px;
+
+        padding: 95px 16px 40px;
+    }
+
+    .new-gallery-title {
+        font-size: clamp(34px, 10.5vw, 46px);
+    }
+}
